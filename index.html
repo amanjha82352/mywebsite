@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>My Website</title>
@@ -10,15 +10,18 @@ body {
     color: white;
     text-align: center;
 }
-h1 {
-    color: yellow;
-}
 button {
     padding: 10px 20px;
-    background: red;
-    color: white;
+    margin: 10px;
     border: none;
     cursor: pointer;
+}
+.amazon {
+    background: orange;
+}
+.flipkart {
+    background: blue;
+    color: white;
 }
 </style>
 
@@ -29,7 +32,13 @@ button {
 <h1>Welcome to My Website</h1>
 <p>This is my online shop</p>
 
-<button>Buy Now</button>
+<a href="https://www.amazon.in" target="_blank">
+    <button class="amazon">Buy on Amazon</button>
+</a>
+
+<a href="https://www.flipkart.com" target="_blank">
+    <button class="flipkart">Buy on Flipkart</button>
+</a>
 
 </body>
 </html>
