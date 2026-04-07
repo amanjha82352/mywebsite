@@ -1,87 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aman Kumar Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funny Page - Aman Updates</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #f5f5f5;
-        }
-        header {
-            background: #222;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        nav {
-            background: #444;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            margin-top: 20px;
-        }
-        .post {
-            background: white;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-        .post h2 {
-            color: #333;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+<style>
+:root {
+  --card1: #ff6b6b;
+  --card2: #ffa500;
+  --card3: #ffff00;
+  --card4: #32cd32;
+  --card5: #1e90ff;
+  --card6: #9370db;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: 400% 400%;
+    color: #fff;
+    margin: 0;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background: #222;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    color: #000;
+    box-shadow: 0 4px 8px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 24px var(--shadow);
+    filter: brightness(1.1);
+}
+
+.card:nth-child(1) { background: var(--card1); }
+.card:nth-child(2) { background: var(--card2); }
+.card:nth-child(3) { background: var(--card3); }
+.card:nth-child(4) { background: var(--card4); }
+.card:nth-child(5) { background: var(--card5); }
+.card:nth-child(6) { background: var(--card6); }
+
+/* Contact */
+.contact {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.contact h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.contact a {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 3em;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    background: linear-gradient(45deg, var(--card1), var(--card2), var(--card3), var(--card4), var(--card5), var(--card6));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    animation: rainbowShift 5s linear infinite;
+}
+
+@keyframes rainbowShift {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #000, #333);
+    color: #ccc;
+    margin-top: 40px;
+}
+
+.footer a {
+    font-size: 2em;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer a:hover {
+    transform: scale(1.2);
+}
+
+/* Links */
+a {
+    color: var(--card5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--card1);
+}
+
+/* 🔥 Tablet */
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+/* 🔥 Mobile */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        font-size: 14px;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
+</style>
+
 </head>
 
 <body>
 
-<header>
-    <h1>Aman Kumar Official Website</h1>
-    <p>Latest Updates & Guides</p>
-</header>
-
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Updates</a>
-    <a href="#">Contact</a>
-</nav>
-
 <div class="container">
 
-    <div class="post">
-        <h2>Aadhar Card Update Guide 2026</h2>
-        <p>इस पोस्ट में हम आपको बताएंगे कि आधार कार्ड कैसे अपडेट करें...</p>
-        <button>Read More</button>
-    </div>
+<h1>😂 Funny Majak Zone 😂</h1>
 
-    <div class="post">
-        <h2>Best PC Build Under ₹20000</h2>
-        <p>अगर आपका बजट कम है तो यह PC build आपके लिए सही है...</p>
-        <button>Read More</button>
-    </div>
+<div class="grid">
+
+<div class="card">1. Teacher: Homework kaha hai? <br> Student: Sir dog kha gaya 😂</div>
+<div class="card">2. Ladka: I love you <br> Ladki: Recharge kara pehle 😎</div>
+<div class="card">3. Mobile slow hai <br> Owner aur slow hai 🤡</div>
+<div class="card">4. Exam me fail hua <br> Maa boli: experience mil gaya 😭</div>
+<div class="card">5. Salary aayi <br> Turant gayab 💸</div>
+<div class="card">6. Gym join kiya <br> Body ne mana kar diya 😆</div>
 
 </div>
 
-<footer>
-    <p>© 2026 Aman Kumar | All Rights Reserved</p>
-</footer>
+<div class="footer">
+<p>&copy; 2026 Aman Updates. All rights reserved.</p>
+</div>
+
+</div>
+
+<div class="card" style="margin-top:20px; text-align:center;">
+🚧 Ye website abhi development me hai 🚧 <br>
+Jaldi hum log new design ke sath aayenge 🚀
+</div>
+
+</div>
+
+<div class="footer">
+<h3>Contact Us</h3>
+<a href="https://wa.me/919835267811" target="_blank" title="WhatsApp">💬</a>
+<a href="mailto:amanjha82352@gmail.com" title="Email">📧</a>
+</div>
 
 </body>
 </html>
